@@ -6,8 +6,14 @@
 *::after {
   box-sizing: border-box;
 }
+/* 링크 스타일 */
+a {
+  color: inherit; /* 상속받은 */
+  text-decoration: none;
+}
 /* 본문 스타일 */
 body {
+  color: #212121;
   background: #ccc;
   font-family: 'Pretendard Variable', Pretendard, -apple-system,
     BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
@@ -40,7 +46,25 @@ body {
 }
 /* 텍스트 링크 모음 */
 .member {
-  background-color: aqua;
+  /* background-color: aqua; */
+  text-align: right;
+  padding: 4px 0;
+  /* font-size: 0; */
+}
+.member li {
+  /* li가 member안에 포함되어있을 때,li안에만 선택할거니까 범위 제한 */
+  /* background-color: pink; */
+  display: inline-block; /* 넌 태어났을 때 block이지만 inline으로 바뀔거야 */
+  /* font-size: 16px; 공백문자를 사라지게하고(member에서 상속) 직접적인 li는 16px */
+}
+.member a {
+  /* member에 들어있는 a */
+  background-color: coral;
+  padding: 6px 10px; /* 클릭할 수 있는 영역 늘리기 */
+  display: inherit; /* 부모가 가진 속성 상속할거야 */
+}
+.divider {
+  margin-right: 4px;
 }
 /* 비주얼 */
 .visual {
