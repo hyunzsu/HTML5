@@ -27,8 +27,8 @@ body {
 /* 헤더 */
 .header {
   background: pink;
-  padding: 0 30px;
   height: 15vh;
+  padding: 0 30px;
 }
 /* 비주얼 */
 .visual {
@@ -39,19 +39,13 @@ body {
 .main {
   background: lightgreen;
   height: 50vh;
-  display: flow-root;
-  padding: 0 15px;
-  /* overflow: hidden; */
+  display: flex;
+  flex-direction: row;
 }
-/* .main::after {
-  content: '';
-  clear: both;
-  display: block;
-} */
-.group {
+/* .group {
   margin: 0 15px;
   float: left;
-}
+} */
 .group1 {
   background: violet;
   width: 250px;
