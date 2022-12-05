@@ -1,5 +1,6 @@
 @import url(./normalize.css);
 @import url(./reset.css);
+@import url(./fontello.css);
 /* 기본 스타일 */
 *,
 *::before,
@@ -26,10 +27,42 @@ body {
 }
 /* 헤더 */
 .header {
-  background: pink;
+  background: #fff;
   height: 15vh;
   padding: 0 30px;
+  border-radius: 0 0 15px 15px;
 }
+.member {
+  background-color: pink;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+/* ::before => first child */
+/* ::after => last child */
+/* 우선순위 규칙 */
+/* li (Type Selector) - 1점 */
+/* .first (Class Selector) - 10점 */
+/* #item (ID Selector) - 100점 */
+/* .member -> 10점, li -> 1점, ::before -> 1점 => 12점 */
+/* .member li::before {
+  content: ':';
+} */
+/* li -> 1점 .first -> 10점, ::before -> 1점 => 12점 */
+/* li.first::before { */
+/* content: ''; */
+/* 11점짜리 취소 12점 적용됨, 태그에서 밀림 */
+/* !important: 다른 속성들 무력화 시킴 */
+/* 점수 똑같이 하려고 li 추가해줌 + 1점 */
+/* } */
+/* .member li:nth-child(2)::before {
+  content: '';
+} */
+/* .member li:nth-child(n + 2)::before {
+  content: ':';
+  /* 두번째부터 몽땅 선택 */
+/* } */
+
 /* 비주얼 */
 .visual {
   background: orange;
