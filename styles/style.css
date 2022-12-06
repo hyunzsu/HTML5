@@ -2,9 +2,15 @@
 @import url(./reset.css);
 /* 숨김 컨텐츠 - 스크린 리더기는 읽을 수 있음 */
 .a11y-hidden {
-  background-color: yellow;
+  background-color: red;
   position: absolute;
-  top: -9999em;
+  /* display: inline-block; */
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  /* 넘어가는 영역을 감출지, 스크롤바 생성할지 */
+  overflow: hidden;
+  clip-path: polygon(0 0, 0 0, 0 0);
 }
 /* 기본 스타일 */
 *,
@@ -82,6 +88,18 @@ body {
 } */
 .divider {
   margin-right: 4px;
+}
+/* 메인 메뉴 */
+.menu {
+  background: #e85e2c
+    linear-gradient(
+      to bottom,
+      #ef9126 0%,
+      #ef9126 0%,
+      #e85e2c 35%,
+      #e85e2c 70%,
+      #ef9126 100%
+    );
 }
 /* 비주얼 */
 .visual {
