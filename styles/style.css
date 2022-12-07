@@ -123,10 +123,24 @@ body {
   color: #fff;
   text-shadow: 1px 1px 0 #000, -1px -1px 0 #000;
 }
+.is-active .menu-button {
+  color: #ff0;
+}
+.is-active .menu-button::after {
+  content: '';
+  display: block;
+  border-top: 2px solid #212121;
+}
 .sub-menu {
   background-color: pink;
   position: absolute;
   display: none;
+}
+.is-active .sub-menu {
+  display: block;
+}
+.sub-menu li {
+  float: left;
 }
 /* 비주얼 */
 .visual {
