@@ -60,6 +60,7 @@ body {
   position: absolute;
   top: 45px;
   left: 60px;
+  z-index: 10;
 }
 /* 텍스트 링크 모음 */
 .member {
@@ -108,8 +109,13 @@ body {
   border-radius: 0 0 5px 5px;
   padding-left: 230px;
   height: 47px;
+  position: relative;
+}
+.menu > li:nth-child(-n + 3) {
+  position: relative;
 }
 .menu-item {
+  /* position: relative; */
   float: left;
   border-left: 2px solid #fff;
 }
@@ -134,13 +140,26 @@ body {
 .sub-menu {
   background-color: pink;
   position: absolute;
+  top: 47px;
   display: none;
+}
+.menu-html,
+.menu-css,
+.menu-standards {
+  left: 0;
+}
+.menu-accessibility,
+.menu-qna,
+.menu-archive {
+  right: 0;
 }
 .is-active .sub-menu {
   display: block;
+  white-space: nowrap; /* 줄바꿈 X */
 }
 .sub-menu li {
-  float: left;
+  display: inline-block;
+  background-color: gold;
 }
 /* 비주얼 */
 .visual {
