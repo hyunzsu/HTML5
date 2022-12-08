@@ -214,8 +214,9 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: coral;
   animation-name: moveEffect;
-  animation-duration: 2000ms;
-  animation-fill-mode: forwards;
+  animation-duration: 3000ms;
+  animation-fill-mode: forwards; /* 마지막에 원상복귀 */
+  animation-timing-function: ease-in-out; /* 빠르게 늘었다가 끝날때 천천히 */
   display: inline-block;
 }
 /* 메인 */
