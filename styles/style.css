@@ -2,7 +2,8 @@
 @import url(./reset.css);
 @import url(./fonts.css);
 /* 숨김 컨텐츠 - 스크린 리더기는 읽을 수 있음 */
-.a11y-hidden {
+.a11y-hidden,
+legend {
   background-color: red;
   position: absolute;
   /* display: inline-block; */
@@ -265,10 +266,11 @@ body {
 }
 /* 메인 */
 .main {
-  background: lightgreen;
-  height: 50vh;
+  background: #fff;
+  min-height: 450px;
   display: flow-root;
-  padding: 0 15px;
+  padding: 30px 15px;
+  border-radius: 15px 15px 0 0;
   /* overflow: hidden; */
 }
 /* .main::after {
@@ -281,7 +283,7 @@ body {
   float: left;
 }
 .group1 {
-  background: violet;
+  /* background: violet; */
   width: 250px;
 }
 .group2 {
@@ -291,6 +293,85 @@ body {
 .group3 {
   background: gold;
   width: 190px;
+}
+/* 로그인 */
+.login {
+  border-radius: 5px;
+  background: orange radial-gradient(circle at right top, orange, orangered);
+  padding: 10px;
+  box-shadow: 5px 5px 0 0 #ccc;
+}
+.login-title {
+  color: yellow;
+  font-size: 15px;
+  font-weight: 700;
+  text-indent: 10px;
+}
+.login-form {
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 10px 0 10px;
+}
+.login-form label {
+  display: inline-block;
+  width: 60px;
+}
+.login-form input {
+  width: 90px;
+  height: 24px;
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 5px;
+  border-radius: 2px;
+}
+.user-email,
+.user-pw {
+  margin-bottom: 5px;
+}
+.login-form fieldset {
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 5px;
+}
+.login-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 52px;
+  background-color: orangered;
+  color: #fff;
+  border: 0;
+  padding: 0 8px;
+  border-radius: 3px;
+  font-size: 13px;
+}
+.sign {
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 0 10px 10px 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  font-size: 12px;
+  padding-top: 7px;
+}
+.sign a::before {
+  content: '\e803';
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: 0.2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: orangered;
 }
 /* 슬로건 */
 .slogan {
