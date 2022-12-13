@@ -449,7 +449,6 @@ body {
   flex-flow: row nowrap;
 }
 .form-group {
-  /* background-color: pink; */
   flex-grow: 1;
   display: flex;
   flex-flow: row nowrap;
@@ -457,8 +456,6 @@ body {
   padding-right: 10px;
 }
 .form-group-label {
-  /* background-color: lime; */
-  /* white-space: nowrap; */
   flex-shrink: 0;
   margin-right: 10px;
 }
@@ -488,7 +485,6 @@ body {
   font-size: 1.2rem;
 }
 .search-button-fill {
-  /* white-space: nowrap; */
   flex-shrink: 0;
   background-color: #212121;
   color: #fff;
@@ -506,7 +502,7 @@ body {
 }
 .tab-list {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row nowrap; /* 가로로 배치 */
 }
 .tab {
   border: 1px solid #aaa;
@@ -516,6 +512,7 @@ body {
   color: #666;
 }
 .is-select.tab {
+  /* .is-select 와 .tab 동시에 */
   background-color: #fff;
   color: #e85e2c;
   border-color: currentColor currentColor #fff currentColor;
