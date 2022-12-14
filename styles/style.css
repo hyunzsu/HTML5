@@ -619,7 +619,7 @@ body {
 }
 .event-button-wrapper {
   height: 20px; /* 다른 브라우저에서 넘치게 보여 부모한테 높이 줌 */
-  overflow: hidden;
+  overflow: hidden; /* 글씨 넘치는거 가려줌 */
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -642,7 +642,7 @@ body {
 }
 .event-thumbnail,
 .event-brief {
-  margin: 10px 0;
+  margin: 10px 0; /* 마진겹침? */
 }
 .event-thumbnail img {
   border: 1px solid #aaa;
@@ -660,9 +660,7 @@ body {
   border-radius: 5px;
   margin-top: 10px;
   height: 27px;
-  overflow: hidden;
-  /* transition-property: height, padding;
-  transition-duration: 400ms, 400ms; */
+  overflow: hidden; /* 전환할 때 넘쳐나는 컨텐츠 숨김 */
   transition: height 400ms 0ms, padding 400ms 400ms;
 }
 .related-list li {
@@ -673,17 +671,14 @@ body {
   padding: 0 5px;
 }
 .related-list a {
-  flex-grow: 1;
+  flex-grow: 1; /* 클릭 면적 늘리기 */
   padding: 0 10px;
+  background-color: palegreen;
 }
 .related-list:hover,
 .related-list:focus {
   height: 147px;
   padding: 10px 0;
-}
-.event-thumbnail img {
-  border: 1px solid #aaa;
-  box-shadow: 5px 5px 0 0 #aaa;
 }
 /* 인기 사이트 */
 .favorite {
