@@ -613,36 +613,49 @@ body {
 /* 신규 이벤트 및 관련 사이트 */
 .event {
   border-bottom: 1px solid #aaa;
-  position: relative;
+}
+.event-title {
+  display: inline-block;
 }
 .event-button-wrapper {
-  /* background-color: yellow; */
+  height: 20px; /* 다른 브라우저에서 넘치게 보여 부모한테 높이 줌 */
   overflow: hidden;
-  height: 18px; /* 다른 브라우저에서 넘치게 보여 부모한테 높이 줌 */
-  position: absolute;
-  top: 0;
-  right: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 5px;
+  float: right;
 }
-#eventDetail {
-}
+/* IR 기법 -> Image Replacement */
 .event-button {
   width: 19px;
-  height: 100%; /* 부모 높이 그대로 */
+  height: 18px;
   border: 0;
-  padding: 0;
-  color: transparent;
+  padding: 18px 0 0 0;
   background: url(./images/back_forward.png) no-repeat;
 }
 .event-button-next {
-  /* transform: rotate(180deg); */
   background-position: -36px 0; /* 이미지 떙겨서 가져옴 */
+}
+.event-button:focus {
+  outline-offset: -2px;
+}
+.event-thumbnail,
+.event-brief {
+  margin: 10px 0;
+}
+.event-thumbnail img {
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #ccc;
+}
+.event-brief {
+  line-height: 1.5;
 }
 .related {
   margin-top: 10px;
 }
 .related-list {
   background-color: #fff;
-  margin-top: 10px;
   border: 1px solid #aaa;
   border-radius: 5px;
   margin-top: 10px;
@@ -657,22 +670,16 @@ body {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  padding: 0 15px;
+  padding: 0 5px;
 }
 .related-list a {
   flex-grow: 1;
+  padding: 0 10px;
 }
 .related-list:hover,
 .related-list:focus {
   height: 147px;
   padding: 10px 0;
-}
-.event-thumbnail,
-.event-brief {
-  margin: 10px 0;
-}
-.event-brief {
-  line-height: 1.5;
 }
 .event-thumbnail img {
   border: 1px solid #aaa;
