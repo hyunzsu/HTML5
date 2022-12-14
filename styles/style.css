@@ -673,7 +673,6 @@ body {
 .related-list a {
   flex-grow: 1; /* 클릭 면적 늘리기 */
   padding: 0 10px;
-  background-color: palegreen;
 }
 .related-list:hover,
 .related-list:focus {
