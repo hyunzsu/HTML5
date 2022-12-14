@@ -7,6 +7,9 @@
 *::after {
   box-sizing: border-box;
 }
+html {
+  font-size: 10px;
+}
 /* 링크 스타일 */
 a {
   color: inherit;
@@ -14,6 +17,7 @@ a {
 }
 /* 본문 스타일 */
 body {
+  font-size: 1.4rem;
   color: #212121;
   background: #ccc;
   font-family: 'Pretendard Variable', Pretendard, -apple-system,
@@ -34,80 +38,91 @@ body {
 /* 헤더 */
 .header {
   background: #fff;
-  height: 15vh;
   padding: 0 30px;
   border-radius: 0 0 15px 15px;
 }
 .member {
   background-color: pink;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-}
-/* ::before => first child */
-/* ::after => last child */
-/* 우선순위 규칙 */
-/* li (Type Selector) - 1점 */
-/* .first (Class Selector) - 10점 */
-/* #item (ID Selector) - 100점 */
-/* .member -> 10점, li -> 1점, ::before -> 1점 => 12점 */
-/* .member li::before {
-  content: ':';
-} */
-/* li -> 1점 .first -> 10점, ::before -> 1점 => 12점 */
-/* li.first::before { */
-/* content: ''; */
-/* 11점짜리 취소 12점 적용됨, 태그에서 밀림 */
-/* !important: 다른 속성들 무력화 시킴 */
-/* 점수 똑같이 하려고 li 추가해줌 + 1점 */
-/* } */
-/* .member li:nth-child(2)::before {
-  content: '';
-} */
-/* .member li:nth-child(n + 2)::before {
-  content: ':';
-  /* 두번째부터 몽땅 선택 */
-/* } */
-.member li::before {
-  content: \e800;
-  font-family: fontello;
-}
-.member a {
-  text-transform: uppercase; /* 생략 가능? index.html에 icon-colon 줬으니깐 */
 }
 /* 비주얼 */
 .visual {
-  background: orange;
-  height: 10vh;
+  height: 120px;
 }
 /* 메인 */
 .main {
-  background: lightgreen;
+  background: #fff;
   min-height: 450px;
-  display: flex;
-  flex-flow: row nowrap; /* 단축 */
-  /* flex-direction: row;
-  flex-wrap: nowrap; */
-  justify-content: space-between; /* 동등하게 비율 */
-  align-items: flex-start;
-  padding: 30px;
+  display: flow-root;
+  padding: 30px 15px;
+}
+.group {
+  float: left;
+  margin: 0 15px;
 }
 .group1 {
-  background: violet;
   width: 250px;
 }
 .group2 {
-  background: salmon;
   width: 380px;
 }
 .group3 {
-  background: gold;
   width: 190px;
 }
+/* 신규 이벤트 및 관련 사이트 */
+.gradient-effect {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+}
+.text-xl {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.accent-color {
+  color: #a52a2a;
+}
+.margin-top-default {
+  margin-top: 20px;
+}
+.event {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #aaa;
+}
+.event-button-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  gap: 5px;
+}
+.event-button {
+  width: 19px;
+  border: 0;
+  height: 18px;
+  padding: 0;
+  /* text-indent: -9999px; */
+  background: url(./images/back_forward.png) no-repeat;
+}
+.event-button-next {
+  background-position: 100% 0;
+}
+.event-thumbnail,
+.event-brief {
+  margin: 10px 0;
+}
+.event-thumbnail img {
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #aaa;
+}
+.related {
+  margin-top: 10px;
+}
+/* 인기 사이트 */
 /* 슬로건 */
 .slogan {
-  background: skyblue;
-  height: 10vh;
+  clear: both;
 }
 /* 푸터 */
 .footer {
@@ -115,5 +130,4 @@ body {
 }
 .footer-inner {
   background: silver;
-  height: 15vh;
 }
